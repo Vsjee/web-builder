@@ -48,8 +48,8 @@ export default function Home() {
             un blog, puedes hacerlo todo con el creador de páginas web de Cube.
           </p>
           <Link
-            href={publicRoutes.SIGNIN}
-            className='flex justify-center place-items-center justify-self-center mt-8 w-24 p-1  border-b-2 hover:text-blue-300 hover:border-blue-300 ease-in duration-300'
+            href={publicRoutes.SIGNUP}
+            className='font-bold flex justify-center place-items-center justify-self-center mt-8 w-24 p-1  border-b-2 hover:text-blue-300 hover:border-blue-300 ease-in duration-300'
           >
             Empezar
             <Image
@@ -64,8 +64,8 @@ export default function Home() {
       </section>
 
       {/* online presence section */}
-      <section className='grid md:grid-cols-2 grid-cols-1'>
-        <article className='bg-black text-slate-50 md:p-20 py-20 px-8'>
+      <section className='grid md:grid-cols-2 grid-cols-1 relative'>
+        <article className='bg-black text-slate-50 md:p-20 md:py-20 pt-20 pb-52 px-8'>
           <article>
             <h1 className='text-4xl font-bold'>Desarrolla tu presencia online</h1>
             <p className='text-sm'>Para crear una página web propia, sigue estos pasos:</p>
@@ -79,8 +79,8 @@ export default function Home() {
             ))}
           </article>
           <Link
-            href={publicRoutes.SIGNIN}
-            className='flex justify-center place-items-center justify-self-center mt-8 w-44 p-1  border-b-2 hover:text-blue-500 hover:border-blue-500 ease-in duration-300'
+            href={publicRoutes.SIGNUP}
+            className='font-bold flex justify-center place-items-center justify-self-center mt-8 w-44 p-1  border-b-2 hover:text-blue-500 hover:border-blue-500 ease-in duration-300'
           >
             Comienza ahora
             <Image
@@ -92,7 +92,7 @@ export default function Home() {
             />
           </Link>
         </article>
-        <article className='grid place-content-center'>
+        <article className='grid place-content-center md:relative md:top-0 absolute -bottom-64 left-0 right-0 '>
           <Image
             src={desing}
             alt='desing img'
@@ -100,6 +100,41 @@ export default function Home() {
             height={100}
             className='w-full h-full'
           />
+        </article>
+      </section>
+
+      {/* control section */}
+      <section className='grid sm:grid-cols-2 grid-cols-1 my-40 md:pt-20 pt-64 md:px-40 px-8'>
+        <article className='md:order-first order-last'>
+          <Image
+            src='../assets/designer.svg'
+            alt='designer'
+            width={100}
+            height={100}
+            className='w-full h-96 md:mt-0 mt-5'
+          />
+        </article>
+        <article className='flex flex-col gap-5'>
+          <h1 className='text-4xl font-bold'>Editor de Cube Libertad de diseño total</h1>
+          <p>
+            Empieza desde cero puedes personalizar completamente con la opción de arrastrar y
+            soltar. Haz que tu sitio cobre vida con fondos de video, efectos de desplazamiento y
+            animación. Con el editor de Cube, puedes crear tu propia página web profesional
+            exactamente como la imaginas
+          </p>
+          <Link
+            href={publicRoutes.SIGNUP}
+            className='font-bold flex justify-center place-items-center justify-self-center mt-8 w-44 p-1  border-b-2 border-black hover:text-blue-500 hover:border-blue-500 ease-in duration-300'
+          >
+            Empieza ahora
+            <Image
+              src='../assets/icons/arrow-left-black.svg'
+              alt='left arrow'
+              className='animate-pulse'
+              width={20}
+              height={20}
+            />
+          </Link>
         </article>
       </section>
     </main>
