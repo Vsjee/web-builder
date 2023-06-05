@@ -1,6 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { publicRoutes } from '@/app/models';
 
 function Navbar() {
   const router = useRouter();
@@ -15,25 +16,28 @@ function Navbar() {
             width={50}
             height={50}
             className='cursor-pointer'
-            onClick={() => router.push('/')}
+            onClick={() => router.push(publicRoutes.HOME)}
           />
         </picture>
         <ul className=' flex gap-5 text-xs'>
-          <Link href='' className=' hover:text-blue-500 ease-in duration-300'>
+          <Link href={publicRoutes.CREATION} className=' hover:text-blue-500 ease-in duration-300'>
             Creación
           </Link>
           <span className='text-gray-300'>|</span>
-          <Link href='' className=' hover:text-blue-500 ease-in duration-300'>
+          <Link href={publicRoutes.PRICING} className=' hover:text-blue-500 ease-in duration-300'>
             Precios
           </Link>
-          <Link href='' className='hover:text-blue-500 ease-in duration-300'>
+          <Link href={publicRoutes.SUPPORT} className='hover:text-blue-500 ease-in duration-300'>
             Centro de ayuda
+          </Link>
+          <Link href={publicRoutes.CONTACT} className='hover:text-blue-500 ease-in duration-300'>
+            Contacto
           </Link>
         </ul>
       </div>
       <button
         className='text-xs py-1 px-6 border-2 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-slate-50  rounded-full ease-in duration-300'
-        onClick={() => router.push('/pages/public/signin')}
+        onClick={() => router.push(publicRoutes.SIGNIN)}
       >
         Entrar
       </button>
