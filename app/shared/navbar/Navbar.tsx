@@ -7,7 +7,7 @@ function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className='bg-slate-50 flex justify-between items-center px-8 py-2'>
+    <nav className='bg-slate-50 flex justify-between items-center px-8 py-2 fixed top-0 w-full'>
       <div className='flex items-center gap-2'>
         <picture>
           <img
