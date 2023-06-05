@@ -92,19 +92,19 @@ export default function Home() {
             />
           </Link>
         </article>
-        <article className='grid place-content-center md:relative md:top-0 absolute -bottom-64 left-0 right-0 '>
+        <article className='grid place-content-center md:relative md:top-0 absolute sm:-bottom-56 -bottom-28 left-0 right-0 ease-in duration-500'>
           <Image
             src={desing}
             alt='desing img'
             width={1000}
             height={100}
-            className='w-full h-full'
+            className='sm:w-full sm:h-full w-96 h-72'
           />
         </article>
       </section>
 
       {/* control section */}
-      <section className='grid sm:grid-cols-2 grid-cols-1 my-40 md:pt-20 pt-64 md:px-40 px-8'>
+      <section className='grid sm:grid-cols-2 grid-cols-1 my-40 md:pt-20 sm:pt-64 pt-32 md:px-40 px-8'>
         <article className='md:order-first order-last'>
           <Image
             src='../assets/designer.svg'
@@ -137,6 +137,8 @@ export default function Home() {
           </Link>
         </article>
       </section>
+
+      {/* examples section */}
     </main>
   );
 }
