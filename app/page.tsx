@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { publicRoutes } from './models';
-import test from '../public/assets/test.png';
+import desing from '../public/assets/desing.png';
+import { onlinePresence } from './models/home.model';
 
 export default function Home() {
   return (
@@ -70,34 +71,12 @@ export default function Home() {
             <p className='text-sm'>Para crear una página web propia, sigue estos pasos:</p>
           </article>
           <article className='grid sm:grid-cols-2 sm:grid-rows-2 grid-cols-1 sm:gap-5 gap-10 mt-16 mb-10'>
-            <div className='border-t pt-5'>
-              <h3 className='font-bold'>Personaliza tu sitio</h3>
-              <p className='text-xs'>
-                Mediante un sistema de drag and drop ten el control absoluto sobre como se mira tu
-                sitio.
-              </p>
-            </div>
-            <div className='border-t pt-5'>
-              <h3 className='font-bold'>Agrega funciones avanzadas</h3>
-              <p className='text-xs'>
-                Crea tu propio blog, añade una tienda online y acepta reservas online. Siempre
-                puedes incorporar más funciones a medida que crezcas.
-              </p>
-            </div>
-            <div className='border-t pt-5'>
-              <h3 className='font-bold'>Edita la vista móvil</h3>
-              <p className='text-xs'>
-                Revisa la versión optimizada para móviles de tu página web. Cambia al Editor móvil
-                para personalizarla aún más.
-              </p>
-            </div>
-            <div className='border-t pt-5'>
-              <h3 className='font-bold'>Optimiza tu sitio para los motores de búsqueda</h3>
-              <p className='text-xs'>
-                Obtén un completo conjunto de herramientas SEO para aumentar tu tráfico orgánico y
-                maximizar el rendimiento de tu sitio en las búsquedas.
-              </p>
-            </div>
+            {onlinePresence.map((item, i) => (
+              <div className='border-t pt-5' key={i}>
+                <h3 className='font-bold'>{item.title}</h3>
+                <p className='text-xs'>{item.content}</p>
+              </div>
+            ))}
           </article>
           <Link
             href={publicRoutes.SIGNIN}
@@ -114,7 +93,13 @@ export default function Home() {
           </Link>
         </article>
         <article className='grid place-content-center'>
-          <Image src={test} alt='desing img' width={1000} height={100} className='w-full h-full' />
+          <Image
+            src={desing}
+            alt='desing img'
+            width={1000}
+            height={100}
+            className='w-full h-full'
+          />
         </article>
       </section>
     </main>
