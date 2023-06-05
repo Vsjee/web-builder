@@ -23,7 +23,7 @@ function Navbar() {
           <Link href={publicRoutes.CREATION} className=' hover:text-blue-500 ease-in duration-300'>
             Creación
           </Link>
-          <span className='text-gray-300'>|</span>
+          <span className='text-gray-400'>|</span>
           <Link href={publicRoutes.PRICING} className=' hover:text-blue-500 ease-in duration-300'>
             Precios
           </Link>
@@ -36,7 +36,7 @@ function Navbar() {
         </ul>
       </div>
       <button
-        className='text-xs py-1 px-6 border-2 text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-slate-50  rounded-full ease-in duration-300'
+        className='text-xs py-2 px-7 border text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-slate-50  rounded-full ease-in duration-300'
         onClick={() => router.push(publicRoutes.SIGNIN)}
       >
         Entrar
