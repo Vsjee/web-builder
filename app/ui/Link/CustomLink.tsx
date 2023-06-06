@@ -4,8 +4,8 @@ import Link from 'next/link';
 interface Props {
   route: string;
   text: string;
-  width: number;
-  textColor: string;
+  width: 10 | 24 | 40;
+  textColor: 'black' | 'white';
   showArrow: boolean;
 }
 
