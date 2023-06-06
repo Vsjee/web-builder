@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { publicRoutes } from './models';
 import desing from '../public/assets/desing.png';
-import { onlinePresence } from './models/home.model';
+import { examples, onlinePresence } from './models/home.model';
 
 export default function Home() {
   return (
@@ -139,6 +139,39 @@ export default function Home() {
       </section>
 
       {/* examples section */}
+      <section className='grid place-content-center sm:gap-5 gap-20 md:grid-cols-2 grid-cols-1 md:px-40 sm:px-24 px-8 ease-linear duration-500'>
+        {examples.map((item, i) => {
+          if (i % 2 !== 0) {
+            return (
+              <article key={i} className='flex flex-col md:mt-20 px-5'>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  className='self-center mb-3 w-96'
+                  width={100}
+                  height={100}
+                />
+                <h1 className='font-bold self-start'>{item.title}</h1>
+                <p className='text-sm'>{item.content}</p>
+              </article>
+            );
+          } else {
+            return (
+              <article key={i} className='flex flex-col px-5'>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  className='self-center mb-3 w-96'
+                  width={100}
+                  height={100}
+                />
+                <h1 className='font-bold self-start'>{item.title}</h1>
+                <p className='text-sm'>{item.content}</p>
+              </article>
+            );
+          }
+        })}
+      </section>
     </main>
   );
 }

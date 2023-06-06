@@ -1,4 +1,4 @@
-import { IOnlinePresence } from '../interfaces';
+import { IExamples, IOnlinePresence } from '../interfaces';
 
 export const onlinePresence: IOnlinePresence[] = [
   {
@@ -20,5 +20,31 @@ export const onlinePresence: IOnlinePresence[] = [
     title: 'Optimiza tu sitio para los motores de búsqueda',
     content:
       'Obtén un completo conjunto de herramientas SEO para aumentar tu tráfico orgánico y maximizar el rendimiento de tu sitio en las búsquedas.',
+  },
+];
+
+export const examples: IExamples[] = [
+  {
+    title: 'Blog',
+    content:
+      'Crea un blog con funciones incorporadas para aumentar el alcance de tu negocio o marca y hacer crecer tu comunidad.',
+    image: '/assets/seo.png',
+  },
+  {
+    title: 'Landing page',
+    content:
+      'Crea hermosas landing pages para el lanzamiento de productos y/o presentar lo que haces.',
+    image: '/assets/seo.png',
+  },
+  {
+    title: 'Facil uso',
+    content: 'Crea la pagina de tus sueños con tan solo arrastrar y soltar.',
+    image: '/assets/seo.png',
+  },
+  {
+    title: 'Herramientas de SEO',
+    content:
+      'Mejora tu visibilidad en los motores de búsqueda con nuestras potentes herramientas de SEO.',
+    image: '/assets/seo.png',
   },
 ];
