@@ -28,23 +28,24 @@ export const examples: IExamples[] = [
     title: 'Blog',
     content:
       'Crea un blog con funciones incorporadas para aumentar el alcance de tu negocio o marca y hacer crecer tu comunidad.',
-    image: '/assets/seo.png',
+    image: '/assets/blog-post.svg',
   },
   {
     title: 'Landing page',
     content:
       'Crea hermosas landing pages para el lanzamiento de productos y/o presentar lo que haces.',
-    image: '/assets/seo.png',
+    image: '/assets/landing-page.svg',
   },
   {
     title: 'Facil uso',
-    content: 'Crea la pagina de tus sueños con tan solo arrastrar y soltar.',
-    image: '/assets/seo.png',
+    content:
+      'Crea la pagina de tus sueños con tan solo arrastrar y soltar. es de facil uso y acceso',
+    image: '/assets/learning.svg',
   },
   {
     title: 'Herramientas de SEO',
     content:
       'Mejora tu visibilidad en los motores de búsqueda con nuestras potentes herramientas de SEO.',
-    image: '/assets/seo.png',
+    image: '/assets/seo.svg',
   },
 ];

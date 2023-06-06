@@ -139,38 +139,41 @@ export default function Home() {
       </section>
 
       {/* examples section */}
-      <section className='grid place-content-center sm:gap-5 gap-20 md:grid-cols-2 grid-cols-1 md:px-40 sm:px-24 px-8 ease-linear duration-500'>
-        {examples.map((item, i) => {
-          if (i % 2 !== 0) {
-            return (
-              <article key={i} className='flex flex-col md:mt-20 px-5'>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  className='self-center mb-3 w-96'
-                  width={100}
-                  height={100}
-                />
-                <h1 className='font-bold self-start'>{item.title}</h1>
-                <p className='text-sm'>{item.content}</p>
-              </article>
-            );
-          } else {
-            return (
-              <article key={i} className='flex flex-col px-5'>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  className='self-center mb-3 w-96'
-                  width={100}
-                  height={100}
-                />
-                <h1 className='font-bold self-start'>{item.title}</h1>
-                <p className='text-sm'>{item.content}</p>
-              </article>
-            );
-          }
-        })}
+      <section className='flex flex-col gap-10 px-8'>
+        <h1 className='text-4xl self-center font-bold'>Utilidades</h1>
+        <section className='grid place-content-center sm:gap-5 gap-0 md:grid-cols-2 grid-cols-1 lg:px-40 md:px-20 sm:px-14 px-0 ease-linear duration-500'>
+          {examples.map((item, i) => {
+            if (i % 2 !== 0) {
+              return (
+                <article key={i} className='flex flex-col md:mt-20 md:px-5'>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    className='self-center md:mb-3 w-80 h-80'
+                    width={100}
+                    height={100}
+                  />
+                  <h1 className='font-bold self-start'>{item.title}</h1>
+                  <p className='text-sm'>{item.content}</p>
+                </article>
+              );
+            } else {
+              return (
+                <article key={i} className='flex flex-col md:px-5'>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    className='self-center md:mb-3 w-80 h-80'
+                    width={100}
+                    height={100}
+                  />
+                  <h1 className='font-bold self-start'>{item.title}</h1>
+                  <p className='text-sm'>{item.content}</p>
+                </article>
+              );
+            }
+          })}
+        </section>
       </section>
     </main>
   );
