@@ -1,4 +1,4 @@
-import { IExamples, IOnlinePresence } from '../interfaces';
+import { IExamples, IOnlinePresence, ITutorial } from '../interfaces';
 
 export const onlinePresence: IOnlinePresence[] = [
   {
@@ -47,5 +47,28 @@ export const examples: IExamples[] = [
     content:
       'Mejora tu visibilidad en los motores de búsqueda con nuestras potentes herramientas de SEO.',
     image: '/assets/seo.svg',
+  },
+];
+
+export const tutorial: ITutorial[] = [
+  {
+    strongText: 'Regístrate en un creador de páginas web gratuito.',
+    text: 'Elige qué tipo de sitio web quieres crear.',
+  },
+  {
+    strongText: 'Personaliza una plantilla o obtén un sitio web hecho para ti.',
+    text: 'Elige tu punto de partida.',
+  },
+  {
+    strongText: 'Arrastra y suelta la función de diseño que prefieras.',
+    text: 'Añade texto, galerías, videos, arte vectorial y mucho más.',
+  },
+  {
+    strongText: 'Cuando la termines puedes publicarla o descargarla.',
+    text: 'Ten en cuenta que que quieres hacer.',
+  },
+  {
+    strongText: 'Disfruta de tu pagina web.',
+    text: 'Y mira como consigues a mas gente que se interese en ti y/o tu producto.',
   },
 ];

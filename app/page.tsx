@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { publicRoutes } from './models';
 import desing from '../public/assets/desing.png';
-import { examples, onlinePresence } from './models/home.model';
+import { examples, onlinePresence, tutorial } from './models/home.model';
+import CustomLink from './ui/Link/CustomLink';
 
 export default function Home() {
   return (
@@ -47,19 +48,13 @@ export default function Home() {
             promocionando tu negocio, mostrando tu trabajo, abriendo tu tienda online o comenzando
             un blog, puedes hacerlo todo con el creador de páginas web de Cube.
           </p>
-          <Link
-            href={publicRoutes.SIGNUP}
-            className='font-bold flex justify-center place-items-center justify-self-center mt-8 w-24 p-1  border-b-2 hover:text-blue-300 hover:border-blue-300 ease-in duration-300'
-          >
-            Empezar
-            <Image
-              src='../assets/icons/arrow-left-white.svg'
-              alt='left arrow'
-              className='animate-pulse'
-              width={20}
-              height={20}
-            />
-          </Link>
+          <CustomLink
+            route={publicRoutes.SIGNUP}
+            text='Empezar'
+            textColor='white'
+            width={24}
+            showArrow={true}
+          />
         </div>
       </section>
 
@@ -78,19 +73,13 @@ export default function Home() {
               </div>
             ))}
           </article>
-          <Link
-            href={publicRoutes.SIGNUP}
-            className='font-bold flex justify-center place-items-center justify-self-center mt-8 w-44 p-1  border-b-2 hover:text-blue-500 hover:border-blue-500 ease-in duration-300'
-          >
-            Comienza ahora
-            <Image
-              src='../assets/icons/arrow-left-white.svg'
-              alt='left arrow'
-              className='animate-pulse'
-              width={20}
-              height={20}
-            />
-          </Link>
+          <CustomLink
+            route={publicRoutes.SIGNUP}
+            text='Empieza ahora'
+            textColor='white'
+            width={40}
+            showArrow={true}
+          />
         </article>
         <article className='grid place-content-center md:relative md:top-0 absolute sm:-bottom-56 -bottom-28 left-0 right-0 ease-in duration-500'>
           <Image
@@ -122,19 +111,13 @@ export default function Home() {
             animación. Con el editor de Cube, puedes crear tu propia página web profesional
             exactamente como la imaginas
           </p>
-          <Link
-            href={publicRoutes.SIGNUP}
-            className='font-bold flex justify-center place-items-center justify-self-center mt-8 w-44 p-1  border-b-2 border-black hover:text-blue-500 hover:border-blue-500 ease-in duration-300'
-          >
-            Empieza ahora
-            <Image
-              src='../assets/icons/arrow-left-black.svg'
-              alt='left arrow'
-              className='animate-pulse'
-              width={20}
-              height={20}
-            />
-          </Link>
+          <CustomLink
+            route={publicRoutes.SIGNUP}
+            text='Empieza ahora'
+            textColor='black'
+            width={40}
+            showArrow={true}
+          />
         </article>
       </section>
 
@@ -174,6 +157,28 @@ export default function Home() {
             }
           })}
         </section>
+      </section>
+
+      {/* how to create a web page */}
+      <section className='flex flex-col justify-center items-center md:py-20 md:px-40 py-14 px-8 mt-20 bg-blue-800 text-slate-50'>
+        <h1 className='text-4xl font-bold'>Cómo crear una página web gratis</h1>
+        <span>Sigue estos 6 sencillos pasos para hacer una página web hoy mismo.</span>
+        <article className='mt-10'>
+          <ul className='list-decimal'>
+            {tutorial.map((item, i) => (
+              <li key={i} className='text-sm'>
+                <span className='font-bold'>{item.strongText}</span> {item.text}
+              </li>
+            ))}
+          </ul>
+        </article>
+        <CustomLink
+          route={publicRoutes.SIGNUP}
+          text='Empieza ahora'
+          textColor='white'
+          width={40}
+          showArrow={true}
+        />
       </section>
     </main>
   );

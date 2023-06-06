@@ -8,3 +8,8 @@ export interface IExamples {
   content: string;
   image: string;
 }
+
+export interface ITutorial {
+  text: string;
+  strongText: string;
+}
