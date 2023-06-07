@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { publicRoutes } from './models';
 import desing from '../public/assets/desing.png';
-import { examples, onlinePresence, tutorial } from './models/home.model';
+import { FAQ, examples, onlinePresence, tutorial } from './models/home.model';
 import CustomLink from './ui/Link/CustomLink';
 
 export default function Home() {
@@ -122,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* examples section */}
-      <section className='flex flex-col gap-10 px-8'>
+      <section className='flex flex-col gap-10 px-8 mb-40'>
         <h1 className='text-4xl self-center font-bold'>Utilidades</h1>
         <section className='grid place-content-center sm:gap-5 gap-0 md:grid-cols-2 grid-cols-1 lg:px-40 md:px-20 sm:px-14 px-0 ease-linear duration-500'>
           {examples.map((item, i) => {
@@ -179,6 +178,68 @@ export default function Home() {
           width={40}
           showArrow={true}
         />
+      </section>
+
+      {/* why why are the best option section */}
+      <section className='grid md:grid-cols-2 grid-cols-1 gap-5 lg:px-40 md:py-40 md:px-38 sm:px-20 px-8 py-32'>
+        <article>
+          <h1 className='md:text-4xl text-2xl font-bold'>
+            Por qué el creador de páginas web Cube es la mejor opción para ti
+          </h1>
+        </article>
+        <article>
+          <p>
+            Con el 85% de los consumidores buscando online antes de hacer una compra, nunca ha sido
+            más importante que tu negocio tenga una página web. Crea un sitio web gratuito y
+            profesional con Cube. Personalizala a tu gusto.
+            <br />
+            <br />
+            Nuestro editor es faci e intuitivo no deberas tener previos conocimientos programación
+            para realizar tu pagina. Que esperas para unirte a esta gran comunidad de personas que
+            decicieron hacer crecer su negocio y alcanze.
+          </p>
+          <CustomLink
+            route={publicRoutes.SIGNUP}
+            text='Empieza ahora'
+            textColor='black'
+            width={40}
+            showArrow={true}
+          />
+        </article>
+      </section>
+
+      {/* creativity section */}
+      <section className='object-cover bg-cover relative'>
+        <Image
+          src='https://images.unsplash.com/photo-1567095751004-aa51a2690368?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'
+          alt='abstract'
+          className='w-full object-cover bg-no-repeat h-96 bg-cover brightness-90'
+          height={2000}
+          width={2000}
+          priority
+        />
+        <h1 className='text-5xl text-center w-full text-slate-50 font-bold absolute right-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+          Despierta tu creatividad
+        </h1>
+      </section>
+
+      {/* FAQ section */}
+      <section className='my-40 lg:mx-40 md:mx-28 sm:mx-20 mx-8 ease-in duration-300'>
+        <h1 className='text-4xl font-bold mb-10'>FAQ</h1>
+        {FAQ.map((item, i) => (
+          <article
+            key={i}
+            className='grid md:grid-cols-2 grid-cols-1 gap-5 sm:py-12 py-8 border-t border-black'
+          >
+            <div className='font-bold'>
+              <span>{i + 1}. </span>
+              <span>{item.question}</span>
+            </div>
+            <div>
+              <p>{item.answer}</p>
+            </div>
+          </article>
+        ))}
       </section>
     </main>
   );

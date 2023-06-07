@@ -1,4 +1,4 @@
-import { IExamples, IOnlinePresence, ITutorial } from '../interfaces';
+import { IExamples, IFAQ, IOnlinePresence, ITutorial } from '../interfaces';
 
 export const onlinePresence: IOnlinePresence[] = [
   {
@@ -70,5 +70,34 @@ export const tutorial: ITutorial[] = [
   {
     strongText: 'Disfruta de tu pagina web.',
     text: 'Y mira como consigues a mas gente que se interese en ti y/o tu producto.',
+  },
+];
+
+export const FAQ: IFAQ[] = [
+  {
+    question: '¿Es fácil crear una página web?',
+    answer:
+      'Sí. Cube ofrece diferentes maneras de crear tu propia página web de forma gratuita, Si quieres 100% libertad de diseño, comienza desde cero y arrastra y suelta las funciones de diseño que necesitas con el Editor de Wix.',
+  },
+  {
+    question: '¿Puedo crear un sitio web sin saber programación?',
+    answer:
+      'Sí, claro. Cube es fácil de usar y hace posible crear un sitio web profesional sin tener conocimientos de programación. En el Editor de Cube, puedes arrastrar y soltar cualquier función que desees y personalizarla para que coincida con el aspecto de tu sitio. Por supuesto, si sabes cómo programar, puedes añadir funcionalidad avanzada a tu sitio.',
+  },
+  {
+    question: '¿Cómo hago que mi página sea compatible con dispositivos móviles?',
+    answer:
+      'Tu página web de Cube viene automáticamente con una versión optimizada para móviles que se ve muy bien en pantallas pequeñas. El Editor móvil de Cube permite personalizar fácilmente tu sitio móvil.',
+  },
+  {
+    question: '¿Debo utilizar un creador de sitios web o contratar a un desarrollador web?',
+    answer:
+      'El creador de sitios web gratuito de Cube es de uso intuitivo. ¿Buscas un servicio web específico? Explora el Cube Marketplace para encontrar un freelancer certificado o una agencia a un precio que se ajuste a tu presupuesto. (pronto)',
+  },
+  {
+    question:
+      '¿Puedo utilizar un creador de sitios web para crear una landing page (página de aterrizaje)?',
+    answer:
+      'Por supuesto. Puedes crear cualquier tipo de página web con Cube. Explora o importa plantillas de landing pages en HTML para comenzar hoy mismo.',
   },
 ];
