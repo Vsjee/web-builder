@@ -1,12 +1,12 @@
 'use client';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { publicRoutes } from './models';
-import desing from '../public/assets/desing.png';
-import { FAQ, examples, onlinePresence, tutorial } from './models/home.model';
-import CustomLink from './ui/Link/CustomLink';
+import Image from 'next/image';
+import { publicRoutes } from '@/app/models';
+import { FAQ, examples, onlinePresence, tutorial } from '@/app/models/home.model';
+import CustomLink from '@/app/ui/Link/CustomLink';
+import desing from '../../../public/assets/desing.png';
 
-export default function Home() {
+function Home() {
   const router = useRouter();
 
   return (
@@ -251,3 +251,4 @@ export default function Home() {
     </main>
   );
 }
+export default Home;
