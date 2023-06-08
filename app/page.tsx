@@ -1,10 +1,14 @@
+'use client';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { publicRoutes } from './models';
 import desing from '../public/assets/desing.png';
 import { FAQ, examples, onlinePresence, tutorial } from './models/home.model';
 import CustomLink from './ui/Link/CustomLink';
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main className='md:mt-12 mt-20 py-8'>
       {/* welcome section */}
@@ -23,7 +27,10 @@ export default function Home() {
           Descubre la plataforma que te brinda la libertad de crear, diseñar y desarrollar tu
           presencia online exactamente como lo imaginaste.
         </p>
-        <button className='flex justify-center place-items-center justify-self-center mt-8 bg-blue-500 text-slate-50 w-40 py-3 px-6 rounded-full hover:bg-blue-400 ease-in duration-300'>
+        <button
+          className='flex justify-center place-items-center justify-self-center mt-8 bg-blue-500 text-slate-50 w-40 py-3 px-6 rounded-full hover:bg-blue-400 ease-in duration-300'
+          onClick={() => router.push(publicRoutes.SIGNUP)}
+        >
           Empezar
           <Image
             src='../assets/icons/arrow-left-white.svg'

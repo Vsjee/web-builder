@@ -1,13 +1,13 @@
 export const publicRoutes = {
   HOME: '/',
-  SIGNIN: '/pages/public/signin',
-  SIGNUP: '/pages/public/signup',
-  CREATION: '/pages/public/creation',
-  SUPPORT: '/pages/public/support',
-  PRICING: '/pages/public/pricing',
-  CONTACT: '/pages/public/contact',
+  SIGNIN: '/auth/signin',
+  SIGNUP: '/auth/signup',
+  CREATION: '/public/creation',
+  SUPPORT: '/public/support',
+  PRICING: '/public/pricing',
+  CONTACT: '/public/contact',
 };
 
 export const privateRoutes = {
-  DASHBOARD: '/pages/private/dashboard',
+  DASHBOARD: '/private/dashboard',
 };
